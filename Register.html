@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <Style>
+    /* 1. Global & Body Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f2f5; /* Soft, light background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Use min-height if this is the only thing on the page */
+        min-height: 100vh; 
+        margin: 0;
+        padding: 20px; /* Add padding for smaller screens */
+    }
+
+    /* 2. Form Container Styles */
+    form {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    fieldset {
+        /* Form container styling */
+        width: 100%; /* Make it responsive */
+        max-width: 450px; /* Limit max width for readability */
+        padding: 30px;
+        border: none;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+        box-sizing: border-box;
+    }
+
+    legend {
+        /* Title styling */
+        text-align: center;
+        font-size: 2em;
+        font-weight: 700;
+        color: #1e8449; /* Green title accent for Register */
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+    
+    /* 3. Input Group & Label Handling */
+
+    /* This targets the wrapping div the <br><br> created */
+    .form-group-line {
+        display: flex; /* Use flexbox to align label and input */
+        flex-direction: column; 
+        margin-bottom: 20px;
+    }
+
+    /* This targets the raw text labels you have in the HTML */
+    fieldset > text {
+        display: inline-block;
+        font-weight: 600;
+        color: #555;
+        min-width: 90px; /* Aligns the raw text labels somewhat */
+        text-align: left;
+    }
+    
+    /* 4. Text/Password/Number Input Styles */
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+   
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-sizing: border-box; 
+        font-size: 1em;
+        transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="number"]:focus,
+    
+    select:focus,
+    textarea:focus {
+        border-color: #2ecc71; /* Green focus highlight */
+        outline: none;
+        box-shadow: 0 0 5px rgba(46, 204, 113, 0.3);
+    }
+
+    /* 5. Radio & Checkbox Styling (Inline Elements) */
+    .inline-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px; /* Space out the items */
+        margin-top: 10px;
+    }
+    
+    /* Style the labels around the radio/checkbox */
+    .radio-label, .checkbox-label {
+        font-weight: normal;
+        color: #555;
+        cursor: pointer;
+    }
+
+    /* 6. Textarea Styling */
+    textarea {
+        resize: vertical; /* Allow vertical resizing only */
+        min-height: 100px;
+        margin-top: 10px;
+    }
+    
+    /* 7. Button & Link Styles */
+    input[type="submit"] {
+        width: 100%;
+        padding: 14px;
+        background-color: #2ecc71; /* Vibrant green for "Save" */
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1em;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 25px;
+        transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #27ae60;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        margin-top: 25px;
+        color: #1e8449; /* Matching green link */
+        text-decoration: none;
+        font-size: 0.95em;
+        font-weight: 500;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Fix for your current HTML structure's spacing */
+    /* This ensures inputs are below the labels instead of inline */
+    fieldset > br {
+        display: none; /* Hide original <br> for better spacing control */
+    }
+    
+    /* This targets the raw text/input pairings you are using */
+    fieldset > input[type="text"],
+    fieldset > input[type="password"],
+    fieldset > input[type="number"],
+    fieldset > input[type="date"],
+    fieldset > select {
+        width: calc(100% - 100px); /* Leave space for the raw text label */
+        display: inline-block;
+        margin-left: 5px;
+    }
+    
+    /* Override for the inline elements (Gender, Skill) to keep them legible */
+    fieldset > input[type="radio"],
+    fieldset > input[type="checkbox"] {
+        margin-right: 5px;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+</style>
+    </Style>
+</head>
+<body>
+    
+    
+
+        <form action="login.html">
+            <fieldset style="width: 300px;">
+            <legend align="center" >Register</legend>
+
+                Username : <input type="text" name="txt-uname" value="" maxlength="30" placeholder="Enter Username"> <br><br> 
+                Password : <input type="password" name="txt-uname" value="" maxlength="20" placeholder="Enter Password"> <br><br> 
+                Phone    : <input type="number" name="txt-uname" value="" maxlength="15" placeholder="Enter number"> <br><br> 
+                Gender : Male<input type="radio" name="sex" checked> | Famale<input type="radio" name="sex" checked> <br><br> 
+                <br><br>
+                Address : <br>
+                <textarea cols="30" rows="5" placeholder="Enter Address"></textarea><br>
+                <input type="submit" value="Save ">
+                <a href="login.html">Already exist Account?</a>
+                
+    
+            </fieldset>
+        </form>
+    
+    
+</body>
+</html>

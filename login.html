@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+    /* 1. Global & Body Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f2f5; /* Soft, light background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    /* 2. Form Container Styles */
+    form {
+        display: flex; /* Keep the original centering */
+        justify-content: center;
+        width: 100%;
+    }
+
+    fieldset {
+        /* Reset and main container styling */
+        width: 300px;
+        padding: 30px;
+        border: none;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow lift */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+    }
+
+    legend {
+        /* Title styling */
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 20px;
+        padding: 0 10px;
+        width: auto;
+    }
+    
+    /* Helper class for grouping and spacing (since you used <br><br>) */
+    .input-group {
+        margin-bottom: 15px; /* Add space between input groups */
+    }
+
+    /* 3. Input & Label Styles */
+    label {
+        display: block; /* Make the label take full width */
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-sizing: border-box; 
+        font-size: 1em;
+        transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        border-color: #007bff; /* Primary color highlight */
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    }
+    
+    /* 4. Button & Link Styles */
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff; /* Primary blue button */
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1em;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        margin-top: 25px;
+        color: #007bff;
+        text-decoration: none;
+        font-size: 0.95em;
+        font-weight: 500;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    
+    <form action="index.html">
+            <fieldset style="width: 300px;">
+            <legend align="center" >Login</legend>
+
+                Username : <input type="text" name="txt-uname" value="" maxlength="20" placeholder="Enter Username"> <br><br> 
+                Password : <input type="password" name="txt-uname" value="" maxlength="10" placeholder="Enter Password"> <br><br> 
+            
+                <input type="submit" value="Login">
+                
+                
+                <a href="register.html">Create New Account?</a>
+    
+            </fieldset>
+        </form>
+    
+</body>
+</html>
